@@ -2,6 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+
 //#################################routen
 import Root from './routes/root';
 import LoginGoogle from './routes/logingoogle';
@@ -36,6 +38,8 @@ const root = createRoot(container); // Erstellt Root
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <RouterProvider router={router} />
+    </HashRouter>
   </React.StrictMode>
 );
